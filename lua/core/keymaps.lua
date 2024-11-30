@@ -54,6 +54,10 @@ map("n", "/", [[/\v]])
 map("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move Line Up" })
 map("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move Line Down" })
 
+-- Indent Code
+map("v", "<", "<gv", { desc = "Indent -4 Space" })
+map("v", ">", ">gv", { desc = "Indent +4 Space" })
+
 -- Go to start or end of line easier
 map({ "n", "x" }, "H", "^", { desc = "Go to Start of Line" })
 map({ "n", "x" }, "L", "g_", { desc = "Go to End of Line" })

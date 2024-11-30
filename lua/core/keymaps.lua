@@ -31,6 +31,48 @@ local copilot_toggle_opts = {
 }
 
 
+-- Rolling
+map("n", "<C-d>", '9j', { desc = "Down 9 Lines" })
+map("n", "<C-u>", '9k', { desc = "Up 9 Lines" })
+
+-- Save key strokes (now we do not need to press shift to enter command mode)
+--map({ "n", "x" }, ";", ":", { desc = "Enter Command Mode" })
+
+-- Delete a word
+map("n", "dw", 'viwd', { desc = "Delete a Word" })
+
+-- Reselect the text that has just been pasted
+map("n", "<leader>v", "printf('`[%s`]', getregtype()[0])", {
+  expr = true,
+  desc = "Reselect Last Pasted area",
+})
+
+-- Always use very magic mode for searching
+map("n", "/", [[/\v]])
+
+-- Move current line up and down
+map("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move Line Up" })
+map("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move Line Down" })
+
+-- Go to start or end of line easier
+map({ "n", "x" }, "H", "^", { desc = "Go to Start of Line" })
+map({ "n", "x" }, "L", "g_", { desc = "Go to End of Line" })
+
+-- Turn the word under cursor to upper case(lower case)
+map("i", "<C-u>", "<Esc>viwUea", { desc = "Turn to Upper Case" })
+map("i", "<C-d>", "<Esc>viwuea", { desc = "Turn to Lower Case" })
+
+-- Auto complete brackets
+map("i", "{", "{}<LEFT>")
+map("i", "(", "()<LEFT>")
+map("i", "[", "[]<LEFT>")
+map("i", "'", "''<LEFT>")
+map("i", "\"", "\"\"<LEFT>")
+
+-- Shortcut for faster save
+map("n", "<leader>w", "<cmd>w<CR>", { desc = " Save the file " })
+-- Save the file and quit
+map("n", "<leader>q", "<cmd>x<CR>", { desc = " Save The File and Quit " })
 
 -- Move to window using the <ctrl> hjkl keys
 map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
@@ -38,10 +80,15 @@ map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
 map("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
 map("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 
--- Move Lines
-map("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
-map("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
-map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
-map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
-map("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
-map("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+-- Lazy
+map("n", "<leader>l", ":Lazy<CR>", { desc = "Lazy" })
+
+-- Telescope
+map("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find Files" })
+map("n", "<leader>re", ":Telescope oldfiles<CR>", { desc = "Find Recent Files" })
+map("n", "<leader>fs", ":Telescope live_grep<CR>", { desc = "Find String in CWD" })
+map("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find Buffers" })
+map("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Find Help Tags" })
+
+-- Clear search with <esc>
+map("n", "<Esc>", ":noh<CR><Esc>", { desc = "Escape and Clear Hlsearch" })

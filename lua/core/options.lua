@@ -17,7 +17,7 @@ vim.opt.wrap = false
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.numberwidth = 4
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = '110'
 
 
 -----------------------------------------------------------

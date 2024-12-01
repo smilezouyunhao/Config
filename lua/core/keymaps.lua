@@ -50,6 +50,10 @@ map("n", "<leader>v", "printf('`[%s`]', getregtype()[0])", {
 -- Always use very magic mode for searching
 map("n", "/", [[/\v]])
 
+-- Split window
+map("n", "<leader>s", ":split<CR>", { desc = "Split by Horizantal" })
+map("n", "<leader>v", ":vsplit<CR>", { desc = "Split by Vertical" })
+
 -- Move current line up and down
 map("v", "K", ":move '<-2<CR>gv-gv", { desc = "Move Line Up" })
 map("v", "J", ":move '>+1<CR>gv-gv", { desc = "Move Line Down" })
@@ -67,11 +71,11 @@ map("i", "<C-u>", "<Esc>viwUea", { desc = "Turn to Upper Case" })
 map("i", "<C-d>", "<Esc>viwuea", { desc = "Turn to Lower Case" })
 
 -- Auto complete brackets
-map("i", "{", "{}<LEFT>")
-map("i", "(", "()<LEFT>")
-map("i", "[", "[]<LEFT>")
-map("i", "'", "''<LEFT>")
-map("i", "\"", "\"\"<LEFT>")
+--map("i", "{", "{}<LEFT>")
+--map("i", "(", "()<LEFT>")
+--map("i", "[", "[]<LEFT>")
+--map("i", "'", "''<LEFT>")
+--map("i", "\"", "\"\"<LEFT>")
 
 -- Shortcut for faster save
 map("n", "<leader>w", "<cmd>w<CR>", { desc = " Save the file " })

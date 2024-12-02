@@ -98,5 +98,9 @@ map("n", "<leader>fs", ":Telescope live_grep<CR>", { desc = "Find String in CWD"
 map("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find Buffers" })
 map("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Find Help Tags" })
 
+-- Neotree
+map("n", "<leader>nt", ":Neotree toggle<CR>", { desc = "Neotree Toggle" })
+map("n", "<leader>gs", ":Neotree float git_status<CR>", { desc = "Neotree Git_Status" })
+
 -- Clear search with <esc>
 map("n", "<Esc>", ":noh<CR><Esc>", { desc = "Escape and Clear Hlsearch" })

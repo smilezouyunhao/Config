@@ -70,13 +70,6 @@ map({ "n", "x" }, "L", "g_", { desc = "Go to End of Line" })
 map("i", "<C-u>", "<Esc>viwUea", { desc = "Turn to Upper Case" })
 map("i", "<C-d>", "<Esc>viwuea", { desc = "Turn to Lower Case" })
 
--- Auto complete brackets
---map("i", "{", "{}<LEFT>")
---map("i", "(", "()<LEFT>")
---map("i", "[", "[]<LEFT>")
---map("i", "'", "''<LEFT>")
---map("i", "\"", "\"\"<LEFT>")
-
 -- Shortcut for faster save
 map("n", "<leader>w", "<cmd>w<CR>", { desc = " Save the file " })
 -- Save the file and quit
@@ -101,6 +94,11 @@ map("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Find Help Tags" })
 -- Neotree
 map("n", "<leader>nt", ":Neotree toggle<CR>", { desc = "Neotree Toggle" })
 map("n", "<leader>gs", ":Neotree float git_status<CR>", { desc = "Neotree Git_Status" })
+
+-- Git_signs
+map("n", "<leader>ghd", ":Gitsigns diffthis<CR>", { desc = "Git_Signs Diffthis" })
+map("n", "<leader>ght", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Git_Signs Toggle_Current_Line_Blame" })
+map("n", "<leader>gm", function() package.loaded.gitsigns.blame_line { full = true } end, { desc = "Git_Signs Blame Line" })
 
 -- Clear search with <esc>
 map("n", "<Esc>", ":noh<CR><Esc>", { desc = "Escape and Clear Hlsearch" })

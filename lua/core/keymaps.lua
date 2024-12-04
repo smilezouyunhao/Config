@@ -92,13 +92,20 @@ map("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find Buffers" })
 map("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Find Help Tags" })
 
 -- Neotree
-map("n", "<leader>nt", ":Neotree toggle<CR>", { desc = "Neotree Toggle" })
+map("n", "<leader>nt", ":Neotree float toggle<CR>", { desc = "Neotree Toggle" })
 map("n", "<leader>gs", ":Neotree float git_status<CR>", { desc = "Neotree Git_Status" })
+map("n", "<leader>nb", ":Neotree float buffers<CR>", { desc = "Neotree Buffers" })
 
 -- Git_signs
 map("n", "<leader>ghd", ":Gitsigns diffthis<CR>", { desc = "Git_Signs Diffthis" })
 map("n", "<leader>ght", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Git_Signs Toggle_Current_Line_Blame" })
 map("n", "<leader>gm", function() package.loaded.gitsigns.blame_line { full = true } end, { desc = "Git_Signs Blame Line" })
+
+-- Bufferline
+map("n", "<Tab>", ":BufferLineCycleNext<CR>", { desc = "Cycle Buffer Next" })
+map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { desc = "Cycle Buffer Prev" })
+map("n", "<leader>bp", ":BufferLinePick<CR>", { desc = "Buffer Pick" })
+map("n", "<leader>bc", ":BufferLinePickClose<CR>", { desc = "Buffer Pick Close" })
 
 -- Clear search with <esc>
 map("n", "<Esc>", ":noh<CR><Esc>", { desc = "Escape and Clear Hlsearch" })

@@ -107,5 +107,8 @@ map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { desc = "Cycle Buffer Prev" })
 map("n", "<leader>bp", ":BufferLinePick<CR>", { desc = "Buffer Pick" })
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", { desc = "Buffer Pick Close" })
 
+-- Todo-Comments
+map("n", "<leader>fd", ":TodoTelescope<CR>", { desc = "Todo Telescope" })
+
 -- Clear search with <esc>
 map("n", "<Esc>", ":noh<CR><Esc>", { desc = "Escape and Clear Hlsearch" })

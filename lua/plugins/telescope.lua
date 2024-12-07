@@ -5,7 +5,7 @@ return {
         "kkharji/sqlite.lua",
         "nvim-lua/plenary.nvim",
         "nvim-tree/nvim-web-devicons",
-        { "scottmckendry/telescope-resession.nvim", dev = true },
+        { "scottmckendry/telescope-resession.nvim", dev = false },
         {
             "nvim-telescope/telescope-fzf-native.nvim",
             build = function()

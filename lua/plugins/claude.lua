@@ -16,8 +16,5 @@ return {
                 },
             },
         })
-    end,
-    keys = {
-        { "<leader>cc", "<cmd>ClaudeCode<CR>", desc = "Toggle Claude Code" },
-    },
+    end
 }

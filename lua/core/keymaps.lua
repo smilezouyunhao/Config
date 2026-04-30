@@ -50,6 +50,9 @@ map("n", "<leader>v", "printf('`[%s`]', getregtype()[0])", {
 -- Always use very magic mode for searching
 map("n", "/", [[/\v]], { desc = "search" })
 
+-- Open ternimal
+map("n", "<leader>t", ":terminal<CR>", { desc = "Open Terminal" })
+
 -- Split window
 map("n", "<leader>s", ":split<CR>", { desc = "Split by Horizantal" })
 map("n", "<leader>v", ":vsplit<CR>", { desc = "Split by Vertical" })
@@ -106,10 +109,6 @@ map("n", "<Tab>", ":BufferLineCycleNext<CR>", { desc = "Cycle Buffer Next" })
 map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { desc = "Cycle Buffer Prev" })
 map("n", "<leader>bp", ":BufferLinePick<CR>", { desc = "Buffer Pick" })
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", { desc = "Buffer Pick Close" })
-
--- Claude
-map("n", "<leader>cc", ":ClaudeCode<CR>", { desc = "Toggle Claude Code" })
-map("n", "<leader>ccc", ":ClaudeCodeContinue<CR>", { desc = "Resume recent conversation" })
 
 -- Todo-Comments
 map("n", "<leader>fd", ":TodoTelescope<CR>", { desc = "Todo Telescope" })

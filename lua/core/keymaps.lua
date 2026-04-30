@@ -48,7 +48,7 @@ map("n", "<leader>v", "printf('`[%s`]', getregtype()[0])", {
 })
 
 -- Always use very magic mode for searching
-map("n", "/", [[/\v]])
+map("n", "/", [[/\v]], { desc = "search" })
 
 -- Split window
 map("n", "<leader>s", ":split<CR>", { desc = "Split by Horizantal" })
